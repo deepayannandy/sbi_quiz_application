@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sbi_quiz_application/pages/UsersList.dart';
 import 'package:sbi_quiz_application/pages/formScreen.dart';
 import 'package:sbi_quiz_application/widgets/buttonStyles.dart';

@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sbi_quiz_application/Models/users.dart';
 import 'package:sbi_quiz_application/pages/homeScreen.dart';
 import 'package:sbi_quiz_application/widgets/buttonStyles.dart';
