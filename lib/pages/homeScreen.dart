@@ -14,31 +14,33 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffd6c7a6),
         body: Stack(
           children: [
+            // Container(
+            //     height: MediaQuery.of(context).size.height,
+            //     width: MediaQuery.of(context).size.width,
+            //     decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //         image: AssetImage("assets/images/backbig.png"),
+            //         fit: BoxFit.cover,
+            //         colorFilter: ColorFilter.mode(
+            //           Color.fromARGB(255, 186, 163, 78).withOpacity(0.8),
+            //           BlendMode.dstATop,
+            //         ),
+            //       ),
+            //     )),
             Container(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/backbig.png"),
-                    fit: BoxFit.cover,
+                    alignment: Alignment.center,
+                    fit: BoxFit.fill,
                     colorFilter: ColorFilter.mode(
-                      Colors.white.withOpacity(0.8),
-                      BlendMode.dstATop,
-                    ),
-                  ),
-                )),
-            Container(
-                height: MediaQuery.of(context).size.height,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fitWidth,
-                    colorFilter: ColorFilter.mode(
-                        Colors.grey.withOpacity(0.5), BlendMode.color),
+                        Colors.grey.withOpacity(0.1), BlendMode.color),
                     image: const AssetImage(
-                      "assets/images/office-removebg.png",
+                      "assets/images/newHome.jpeg",
                     ),
                   ),
                 )),
@@ -59,11 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(
                               width: 0,
                             ),
-                            Image.asset(
-                              "assets/images/Logo.png",
-                              height: 100,
-                              width: 100,
-                            ),
+                            // Image.asset(
+                            //   "assets/images/Logo.png",
+                            //   height: 100,
+                            //   width: 100,
+                            // ),
                             Spacer(),
                             GestureDetector(
                               onTap: () {
@@ -91,68 +93,69 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      Image.asset(
-                        "assets/images/banners.png",
-                        height: 200,
-                      ),
+                      // Image.asset(
+                      //   "assets/images/banners.png",
+                      //   height: 200,
+                      // ),
                       const SizedBox(
                         height: 80,
                       ),
                     ]),
               ),
             ),
-            Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 200),
-                    child: Image.asset(
-                      "assets/images/question2-removebg-preview.png",
-                      width: 100,
-                      height: 100,
-                    ))),
-            Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                    padding: EdgeInsets.only(left: 80, right: 80, bottom: 30),
-                    child: Image.asset(
-                      "assets/images/questionimage-removebg-preview.png",
-                      width: 150,
-                      height: 200,
-                    ))),
-            Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 20),
-                    child: Image.asset(
-                      "assets/images/questionimage-removebg-preview.png",
-                      width: 200,
-                      height: 200,
-                    ))),
-            Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                    padding: EdgeInsets.only(left: 40, right: 20, bottom: 200),
-                    child: Image.asset(
-                      "assets/images/question2-removebg-preview.png",
-                      width: 100,
-                      height: 100,
-                    ))),
-            Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 80, right: 80, bottom: 220),
-                  child: Text(
-                    "Test Your Knowledge and Win!",
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.grey.shade800),
-                  ),
-                )),
+            // Align(
+            //     alignment: Alignment.bottomLeft,
+            //     child: Padding(
+            //         padding: EdgeInsets.only(left: 40, right: 40, bottom: 200),
+            //         child: Image.asset(
+            //           "assets/images/question2-removebg-preview.png",
+            //           width: 100,
+            //           height: 100,
+            //         ))),
+            // Align(
+            //     alignment: Alignment.bottomLeft,
+            //     child: Padding(
+            //         padding: EdgeInsets.only(left: 80, right: 80, bottom: 30),
+            //         child: Image.asset(
+            //           "assets/images/questionimage-removebg-preview.png",
+            //           width: 150,
+            //           height: 200,
+            //         ))),
+            // Align(
+            //     alignment: Alignment.bottomRight,
+            //     child: Padding(
+            //         padding: EdgeInsets.only(left: 40, right: 40, bottom: 20),
+            //         child: Image.asset(
+            //           "assets/images/questionimage-removebg-preview.png",
+            //           width: 200,
+            //           height: 200,
+            //         ))),
+            // Align(
+            //     alignment: Alignment.bottomRight,
+            //     child: Padding(
+            //         padding: EdgeInsets.only(left: 40, right: 20, bottom: 200),
+            //         child: Image.asset(
+            //           "assets/images/question2-removebg-preview.png",
+            //           width: 100,
+            //           height: 100,
+            //         ))),
+            // Align(
+            //     alignment: Alignment.bottomCenter,
+            //     child: Padding(
+            //       padding: EdgeInsets.only(left: 80, right: 80, bottom: 220),
+            //       child: Text(
+            //         "Test Your Knowledge and Win!",
+            //         style: TextStyle(
+            //             fontSize: 30,
+            //             fontWeight: FontWeight.w800,
+            //             color: Colors.grey.shade800),
+            //       ),
+            //     )),
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.only(left: 80, right: 80, bottom: 50),
+                padding:
+                    const EdgeInsets.only(left: 100, right: 100, bottom: 50),
                 child: ElevatedButton(
                   style: FilledButtonStyle(),
                   onPressed: () {

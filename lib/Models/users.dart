@@ -8,7 +8,7 @@ class Users extends HiveObject {
   Users({
     required this.username,
     required this.contact,
-    required this.occupation,
+    required this.pfNumber,
     required this.dateandtime,
     required this.rating,
   });
@@ -20,7 +20,7 @@ class Users extends HiveObject {
   String contact;
 
   @HiveField(2)
-  String occupation;
+  String pfNumber;
 
   @HiveField(3)
   String dateandtime;

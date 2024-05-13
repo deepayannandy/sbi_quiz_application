@@ -48,7 +48,7 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void fetchQuestion() {
-    if (questionCount < 3) {
+    if (questionCount < 0) {
       setState(() {
         askedquestion = comQuestions[questionCount - 1];
       });
@@ -216,7 +216,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                         ),
                                         Spacer(),
                                         Text(
-                                          "${questionCount}/10",
+                                          "${questionCount}/15",
                                           style: TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w400),
@@ -266,7 +266,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 child: ElevatedButton(
                   style: FilledButtonStyle(),
                   onPressed: () {
-                    if (questionCount < 10) {
+                    if (questionCount < 15) {
                       questionCount = questionCount + 1;
                       print("${askedquestion!.answer} - ${Selectedanswer}");
                       if (askedquestion!.answer == Selectedanswer) {

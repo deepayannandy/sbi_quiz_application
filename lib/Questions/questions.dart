@@ -14,7 +14,350 @@ List<questions> comQuestions = [
       d: "You observe need one",
       answer: "You only need one")
 ];
+
+// normal questions
 List<questions> normalQuestions = [
+  questions(
+      question: "Who was the first woman Governor of India",
+      a: "Indira Gandhi ",
+      b: "Draupadi Murmu",
+      c: "Sarojini Naidu",
+      d: "Pratibha Patil ",
+      answer: "Sarojini Naidu"),
+  questions(
+      question: "Who is the grandfather of India?",
+      a: "Mahatma Gandhi",
+      b: "Draupadi Murmu",
+      c: "Maharshi Dyanand Sarswati",
+      d: "Dr. B. R. Ambedkar",
+      answer: "Maharshi Dyanand Sarswati"),
+  questions(
+      question: "How many SBILD are there in SBI?",
+      a: "40",
+      b: "45",
+      c: "50",
+      d: "52",
+      answer: "50"),
+  questions(
+      question:
+          "To facilitate to medical treatment for Covid 19 SBI launched which personal loan?",
+      a: "Kavach Loan",
+      b: "Chikistya Loan",
+      c: "Get well soon Plan",
+      d: "Ayshman Bharat Loan",
+      answer: "Kavach Loan"),
+  questions(
+      question:
+          "Ajay Banga was selected as the President of the World Bank group and began his term on June 2, 2023.What is the incumbency of his present position in the World Bank group?",
+      a: "14",
+      b: "13",
+      c: "15",
+      d: "16",
+      answer: "14"),
+  questions(
+      question:
+          "How many languages are there in the 500 rupees paper currency note in India including the panel?",
+      a: "16",
+      b: "15",
+      c: "18",
+      d: "17",
+      answer: "17"),
+  questions(
+      question:
+          "Which monument is printed in one side of 20 rupee currency note?",
+      a: "Red fort",
+      b: "Ellora Caves",
+      c: "Rani ki Vav",
+      d: "Hampi Temple",
+      answer: "Ellora Caves"),
+  questions(
+      question:
+          "What is the present position as per the incumbency of the CGM of the Kolkata Circle?",
+      a: "24",
+      b: "25",
+      c: "26",
+      d: "27",
+      answer: "26"),
+  questions(
+      question: "From which date SBI started using the keyhole logo?",
+      a: "October 1, 1971",
+      b: "July 1, 1955",
+      c: "July 1, 1971",
+      d: "July 1, 1969",
+      answer: "October 1, 1971"),
+  questions(
+      question: "From which date SBI started using the keyhole logo?",
+      a: "October 1, 1971",
+      b: "July 1, 1955",
+      c: "July 1, 1971",
+      d: "July 1, 1969",
+      answer: "October 1, 1971"),
+  questions(
+      question:
+          "Bank of Calcutta, from its inception, has been assigned with the power to issue [currency] Notes. But which was the first Bank in India to issue these Notes?",
+      a: "Asiatic Bank",
+      b: "Bank of Hindostan",
+      c: "Madras Bank",
+      d: "Bank of Calcutta",
+      answer: "Bank of Hindostan"),
+  questions(
+      question:
+          "After the passage of the Indian Currency Act, 1861, where was the first-ever Branch of any Presidency Bank opened?",
+      a: "Dacca",
+      b: "Mirzapur",
+      c: "Pune",
+      d: "Rangoon",
+      answer: "Rangoon"),
+  questions(
+      question:
+          "Who was the first free India’s Minister of Railways and later the Minister of Finance?",
+      a: "1903",
+      b: "1902",
+      c: "1905",
+      d: "1901",
+      answer: "1902"),
+  questions(
+      question: "When was the Savings Bank Deposit Scheme introduced?",
+      a: "C D Deshmukh",
+      b: "John Matthai",
+      c: "B R Ambedkar",
+      d: "Sardar Vallabhbhai Patel",
+      answer: "John Matthai"),
+  questions(
+      question:
+          "Who was the first Indian Secretary &  Treasurer of the Imperial Bank of India?",
+      a: "P.A. Engineer",
+      b: "JRD Tata",
+      c: "S K Handoo",
+      d: "John Matthai",
+      answer: "P.A. Engineer"),
+  questions(
+      question:
+          "From which year onwards the balance sheet of the SBI changed from calendar year to financial year?",
+      a: "1986",
+      b: "1987",
+      c: "1988",
+      d: "1990",
+      answer: "1988"),
+  questions(
+      question:
+          "Online, SBI the banks’ internet banking rolled out on a pilot basis in which year?",
+      a: "August 1, 2000",
+      b: "August 1, 2001",
+      c: "August 1, 2002",
+      d: "August 15, 2003",
+      answer: "August 1, 2000"),
+  questions(
+      question:
+          "Bank’s Day is celebrated on July 1. What other’s celebrated on that day?",
+      a: "Martyr’s Day",
+      b: "Mother’s Day",
+      c: "Human Rights Day",
+      d: "Doctors Day",
+      answer: "Doctors Day"),
+  questions(
+      question: "What is the helpline number for financial fraud in India?",
+      a: "1930",
+      b: "1906",
+      c: "1363",
+      d: "1098",
+      answer: "1930"),
+  questions(
+      question:
+          "Who has designed the SBI Key hole logo which was replaced by the banyan tree logo?",
+      a: "R K Talwar",
+      b: "John Matthai",
+      c: "Shekhar Kamat",
+      d: "Indira Gandhi",
+      answer: "Shekhar Kamat"),
+  questions(
+      question: "First talkie film of India",
+      a: "Raja Harishchandra",
+      b: "Alam Ara",
+      c: "Kishan Kanheiya",
+      d: "Sadma",
+      answer: "Alam Ara"),
+  questions(
+      question: "‘Play it my way’ written by whom",
+      a: "Sachin Tendulkar",
+      b: "Ravi Shatri",
+      c: "Sunil Gavaskar",
+      d: "Rahul Dravid",
+      answer: "Sachin Tendulkar"),
+  questions(
+      question:
+          "Who won the Dada Saheb Phalke Award for the life time achievement in 2023?",
+      a: "Waheeda Rahman",
+      b: "Asha Parekh",
+      c: "Tanuja",
+      d: "Farida Jala",
+      answer: "Waheeda Rahman"),
+  questions(
+      question:
+          "Who won the Dada Saheb Phalke Award for the life time achievement in 2023?",
+      a: "Waheeda Rahman",
+      b: "Asha Parekh",
+      c: "Tanuja",
+      d: "Farida Jala",
+      answer: "Waheeda Rahman"),
+  questions(
+      question:
+          "In 1878 which bank was first to introduce the Pension & Guarantee Fund?",
+      a: "Bank of Calcutta",
+      b: "Bank of Bombay",
+      c: "Bank of Bengal",
+      d: "Bank of Madras",
+      answer: "Bank of Madras"),
+  questions(
+      question:
+          "To facilitate the spread of Banking facilities the Imperial Bank of India in 1921 as agreed with the Government of India to open how many numbers of new branches within the first five years.",
+      a: "50",
+      b: "75",
+      c: "100",
+      d: "150",
+      answer: "100"),
+  questions(
+      question: "When the foreign exchange department was set up in Calcutta?",
+      a: "1932",
+      b: "1937",
+      c: "1935",
+      d: "1947",
+      answer: "1937"),
+  questions(
+      question: "The computers were first introduced in SBI in which year?",
+      a: "1966",
+      b: "1967",
+      c: "1971",
+      d: "1970",
+      answer: "1967"),
+  questions(
+      question:
+          "Till August 1947, Imperial Bank has opened how many branches in Pakistan?",
+      a: "23",
+      b: "24",
+      c: "25",
+      d: "26",
+      answer: "23"),
+  questions(
+      question:
+          "From which year onwards the post of Managing Directors in SBI was increased from two to four?",
+      a: "2011",
+      b: "2019",
+      c: "2012",
+      d: "2010",
+      answer: "2010"),
+  questions(
+      question: "What does the dark blue color in the SBI Logo represent?",
+      a: "Unity & prosperity",
+      b: "Trust & integrity",
+      c: "Security & safety",
+      d: "Security & Trust",
+      answer: "Trust & integrity"),
+  questions(
+      question: "What is the majorly used Toll-Free number of SBI?",
+      a: "18004321/18002100",
+      b: "18003800/18001234",
+      c: "18001234/18002100",
+      d: "18001234/18002211",
+      answer: "18001234/18002100"),
+  questions(
+      question:
+          "When did associates bank become subsidiaries of the State Bank of India?",
+      a: "1955",
+      b: "1959",
+      c: "1969",
+      d: "1961",
+      answer: "1959"),
+  questions(
+      question:
+          "Year of printing on rupees 200 notes is written in which part of the note?",
+      a: "Right in front",
+      b: "Right of reverse",
+      c: "Left in reverse",
+      d: "Middle in reverse",
+      answer: "Left in reverse"),
+  questions(
+      question:
+          "In which year RBI transfer its entire Share holding in SBI to the Government of India?",
+      a: "2001",
+      b: "2005",
+      c: "2009",
+      d: "2007",
+      answer: "2007"),
+  questions(
+      question: "What is the title of the Annual Report for the year 2022-23?",
+      a: "Progress & prospects",
+      b: "Achievement & Challenges",
+      c: "Year in Review",
+      d: "Responsive Responsible Resilient",
+      answer: "Responsive Responsible Resilient"),
+  questions(
+      question: "What is the common seal of the SBI?",
+      a: "Banyan tree",
+      b: "Key whole logo",
+      c: "Bankers to every Indian",
+      d: "Be Safe Go Yono",
+      answer: "Banyan tree"),
+  questions(
+      question: "Employee engagement survey 2023 is called",
+      a: "Saksham",
+      b: "Parivartan",
+      c: "SBI Citizen",
+      d: "Abhiuday",
+      answer: "Abhiuday"),
+  questions(
+      question:
+          "Which institution developed India’s first ‘Farmland Price Index’?",
+      a: "IIT Kharagpur",
+      b: "IIT Mumbai",
+      c: "IIT Madras",
+      d: "IIT Delhi",
+      answer: "IIT Madras"),
+  questions(
+      question:
+          "Pension departemtn has recently launched an online portal for government retirees? What is the name of the portal?",
+      a: "Abhyukt Portal",
+      b: "Vriddhi Portal",
+      c: "Bhavishya Portal",
+      d: "Vikas Portal",
+      answer: "Bhavishya Portal"),
+  questions(
+      question:
+          "Recently, which country won the gold medal in the Archery World Cup in the Mens recurve events?",
+      a: "India",
+      b: "South Korea",
+      c: "Malaysia",
+      d: "Indonesia",
+      answer: "India"),
+  questions(
+      question:
+          "Tale Valley wild life sanctuary, recently seen in news, is located in which state?",
+      a: "Arunachal Pradesh",
+      b: "Assam",
+      c: "Maharashtra",
+      d: "Tamil Nadu",
+      answer: "Arunachal Pradesh"),
+  questions(
+      question: "When is the National Voters Day celebrated in India?",
+      a: "5 January",
+      b: "5 December",
+      c: "25 January",
+      d: "25 December",
+      answer: "25 January"),
+  questions(
+      question: "Which is the third highest civilian award in India?",
+      a: "Bharat Ratna",
+      b: "Padma Bhushan",
+      c: "Padma Shri",
+      d: "Padma Vibhushan",
+      answer: "Padma Bhushan"),
+  questions(
+      question: "When is the National Voters Day celebrated in India?",
+      a: "5 January",
+      b: "5 December",
+      c: "25 January",
+      d: "25 December",
+      answer: "25 January"),
   questions(
       question: "Who was the first Governor of the Reserve Bank of India?",
       a: "Osborne A Smith",

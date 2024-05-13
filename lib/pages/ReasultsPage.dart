@@ -76,8 +76,8 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
                           height: 120,
                         ),
                         Image.asset(
-                          widget.score > 5
-                              ? "assets/images/cong100.gif"
+                          widget.score > 11
+                              ? "assets/images/congo.gif"
                               : "assets/images/thankDotted.gif",
                           width: MediaQuery.of(context).size.width / .8,
                         ),

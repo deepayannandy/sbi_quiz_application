@@ -19,7 +19,7 @@ class UsersAdapter extends TypeAdapter<Users> {
     return Users(
       username: fields[0] as String,
       contact: fields[1] as String,
-      occupation: fields[2] as String,
+      pfNumber: fields[2] as String,
       dateandtime: fields[3] as String,
       rating: fields[4] as int,
     );
@@ -34,7 +34,7 @@ class UsersAdapter extends TypeAdapter<Users> {
       ..writeByte(1)
       ..write(obj.contact)
       ..writeByte(2)
-      ..write(obj.occupation)
+      ..write(obj.pfNumber)
       ..writeByte(3)
       ..write(obj.dateandtime)
       ..writeByte(4)

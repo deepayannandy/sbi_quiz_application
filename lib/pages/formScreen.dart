@@ -7,6 +7,7 @@ import 'package:sbi_quiz_application/pages/homeScreen.dart';
 import 'package:sbi_quiz_application/pages/quizpage.dart';
 import 'package:sbi_quiz_application/widgets/buttonStyles.dart';
 import 'package:sbi_quiz_application/widgets/mobile_text_form_field.dart';
+import 'package:sbi_quiz_application/widgets/PF_text_form_field.dart';
 import 'package:sbi_quiz_application/widgets/name_text_form_field.dart';
 
 const List<String> list = <String>[
@@ -29,6 +30,7 @@ class _FormScreenState extends State<FormScreen> {
   GlobalKey<FormState> userFormKey = GlobalKey<FormState>();
   final TextEditingController name = TextEditingController();
   final TextEditingController number = TextEditingController();
+  final TextEditingController pfnumber = TextEditingController();
   double screenheight = 1200;
   Box<Users>? usersBox;
   String ocupation = "";
@@ -144,7 +146,7 @@ class _FormScreenState extends State<FormScreen> {
                                   height: 20,
                                 ),
                                 Text(
-                                  "Occupation",
+                                  "PF Number",
                                   style: TextStyle(
                                       fontSize: 20,
                                       color: Colors.grey.shade800,
@@ -153,34 +155,7 @@ class _FormScreenState extends State<FormScreen> {
                                 SizedBox(
                                   height: 10,
                                 ),
-                                DropdownMenu<String>(
-                                  width:
-                                      MediaQuery.of(context).size.width - 120,
-                                  initialSelection: list.first,
-                                  textStyle: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.grey.shade800,
-                                      fontWeight: FontWeight.normal),
-                                  inputDecorationTheme: InputDecorationTheme(
-                                    border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.grey.shade800,
-                                          width: 2),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                  ),
-                                  onSelected: (String? value) {
-                                    setState(() {
-                                      ocupation = value!;
-                                    });
-                                  },
-                                  dropdownMenuEntries: list
-                                      .map<DropdownMenuEntry<String>>(
-                                          (String value) {
-                                    return DropdownMenuEntry<String>(
-                                        value: value, label: value);
-                                  }).toList(),
-                                )
+                                PFTextFormField(nameController: pfnumber)
                               ],
                             ),
                           )
@@ -219,14 +194,14 @@ class _FormScreenState extends State<FormScreen> {
                 onPressed: () {
                   if (userFormKey.currentState!.validate()) {
                     List<Users> user = usersBox!.values
-                        .where((element) => element.contact == number.text)
+                        .where((element) => element.pfNumber == pfnumber.text)
                         .toList();
                     if (user.length == 0) {
                       Users userdata = Users(
                           rating: 0,
                           username: name.text,
                           contact: number.text,
-                          occupation: ocupation,
+                          pfNumber: pfnumber.text,
                           dateandtime: DateTime.now().toString());
                       Navigator.pushReplacement(
                           context,
@@ -234,7 +209,7 @@ class _FormScreenState extends State<FormScreen> {
                               builder: (context) =>
                                   QuizScreen(userdata: userdata)));
                     } else {
-                      Fluttertoast.showToast(msg: "Contact already exist");
+                      Fluttertoast.showToast(msg: "PF already exist");
                     }
                   }
                 },

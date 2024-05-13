@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 // ignore: non_constant_identifier_names
 FilledButtonStyle() {
   return ElevatedButton.styleFrom(
-    textStyle: const TextStyle(
-        fontSize: 18.0,
-        color: Color.fromARGB(255, 112, 112, 112),
-        fontWeight: FontWeight.bold),
-    minimumSize: const Size.fromHeight(66.0),
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-    backgroundColor: const Color(0xff155EEF),
-  );
+      textStyle: const TextStyle(
+          fontSize: 18.0,
+          color: Color.fromARGB(255, 112, 112, 112),
+          fontWeight: FontWeight.bold),
+      minimumSize: const Size.fromHeight(66.0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      backgroundColor: Color(0xff0867df),
+      shadowColor: Colors.white);
 }
 
 // ignore: non_constant_identifier_names

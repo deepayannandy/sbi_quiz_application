@@ -40,7 +40,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
     );
     sheet
         .cell(exel.CellIndex.indexByColumnRow(columnIndex: 2, rowIndex: 0))
-        .value = exel.TextCellValue("Occupation");
+        .value = exel.TextCellValue("PF Number");
     sheet
         .cell(exel.CellIndex.indexByColumnRow(columnIndex: 3, rowIndex: 0))
         .value = exel.TextCellValue("Rating");
@@ -59,7 +59,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
       sheet
           .cell(
               exel.CellIndex.indexByColumnRow(columnIndex: 2, rowIndex: i + 1))
-          .value = exel.TextCellValue(user.occupation);
+          .value = exel.TextCellValue(user.pfNumber);
       sheet
           .cell(
               exel.CellIndex.indexByColumnRow(columnIndex: 3, rowIndex: i + 1))
@@ -252,7 +252,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
                   ),
                   Spacer(),
                   Text(
-                    user.occupation,
+                    user.pfNumber,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
                   ),
                 ],
