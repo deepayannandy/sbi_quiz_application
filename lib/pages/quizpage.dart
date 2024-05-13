@@ -18,6 +18,7 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   int score = 0;
+  List<int> askedq = [];
   Random random = new Random();
   NumberFormat formatter = new NumberFormat("00");
   int questionCount = 1;
@@ -54,7 +55,14 @@ class _QuizScreenState extends State<QuizScreen> {
       });
     } else {
       setState(() {
-        askedquestion = normalQuestions[random.nextInt(normalQuestions.length)];
+        int ran = random.nextInt(normalQuestions.length);
+        while (askedq.contains(ran)) {
+          print("old index : $ran");
+          ran = random.nextInt(normalQuestions.length);
+          print("new index : $ran");
+        }
+        askedq.add(ran);
+        askedquestion = normalQuestions[ran];
       });
     }
   }
@@ -275,6 +283,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       Selectedanswer = "";
                       fetchQuestion();
                     } else {
+                      print(askedq);
                       Navigator.push(
                           context,
                           MaterialPageRoute(

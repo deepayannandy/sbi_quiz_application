@@ -111,11 +111,11 @@ List<questions> normalQuestions = [
   questions(
       question:
           "Who was the first free India’s Minister of Railways and later the Minister of Finance?",
-      a: "1903",
-      b: "1902",
-      c: "1905",
-      d: "1901",
-      answer: "1902"),
+      a: "CD Deshmukh",
+      b: "John Matthai",
+      c: "BR Ambedkar",
+      d: "Sardar Vallabhbhai Patel",
+      answer: "John Matthai"),
   questions(
       question: "When was the Savings Bank Deposit Scheme introduced?",
       a: "C D Deshmukh",
@@ -294,7 +294,7 @@ List<questions> normalQuestions = [
   questions(
       question: "What is the common seal of the SBI?",
       a: "Banyan tree",
-      b: "Key whole logo",
+      b: "Keyhole logo",
       c: "Bankers to every Indian",
       d: "Be Safe Go Yono",
       answer: "Banyan tree"),

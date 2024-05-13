@@ -49,7 +49,7 @@ class NameTextFormField extends StatelessWidget {
       validator: (value) {
         if (value!.trim().isEmpty) {
           return "Name is required";
-        } else if (value.length < 8) {
+        } else if (value.length < 6) {
           return "Name length should be at list 6";
         }
         return null;

@@ -12,7 +12,7 @@ class PFTextFormField extends StatelessWidget {
       controller: nameController,
       keyboardType: TextInputType.name,
       textCapitalization: TextCapitalization.none,
-      maxLength: 50,
+      maxLength: 7,
       maxLines: null,
       style: TextStyle(
         fontSize: 20.0,
@@ -44,8 +44,8 @@ class PFTextFormField extends StatelessWidget {
       validator: (value) {
         if (value!.trim().isEmpty) {
           return "PF Number is required";
-        } else if (value.length < 6) {
-          return "PF Number length should be at list 6";
+        } else if (value.length < 7) {
+          return "PF Number length should be at list 7";
         }
         return null;
       },
