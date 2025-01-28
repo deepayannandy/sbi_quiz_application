@@ -35,7 +35,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
 
   congrats() async {
     controller.play();
-    await Future.delayed(Duration(milliseconds: 2000), () {});
+    await Future.delayed(const Duration(milliseconds: 2000), () {});
     controller.stop();
   }
 
@@ -50,7 +50,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/backbig.png"),
+                  image: const AssetImage("assets/images/backbig.png"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Colors.white.withOpacity(0.8),
@@ -60,7 +60,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
               )),
           SingleChildScrollView(
               child: Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +68,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
                         const SizedBox(
                           height: 30,
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [],
                         ),
@@ -88,7 +88,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
                           isRated == false
                               ? "Rate your experience with SBI"
                               : "Thank you for your valuable feedback",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xff1D2939),
                               fontSize: 24,
                               fontWeight: FontWeight.w700),
@@ -136,7 +136,10 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
                           Text(
                             "Start Again",
                             style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w800),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
@@ -162,7 +165,7 @@ class _ReasultsScreenState extends State<ReasultsScreen> {
                   blastDirection: pi / 2,
                   gravity: 0.2,
                   emissionFrequency: .2,
-                  maximumSize: Size(30, 20),
+                  maximumSize: const Size(30, 20),
                   blastDirectionality: BlastDirectionality.explosive,
                 ),
               ))

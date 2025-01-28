@@ -9,7 +9,7 @@ FilledButtonStyle() {
           fontWeight: FontWeight.bold),
       minimumSize: const Size.fromHeight(66.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-      backgroundColor: Color(0xff0867df),
+      backgroundColor: const Color(0xff0867df),
       shadowColor: Colors.white);
 }
 

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CircoLife',
+      title: 'SBI',
       theme: ThemeData(
         fontFamily: "Inter",
         primaryColor: const Color(0xFF11A8FD),

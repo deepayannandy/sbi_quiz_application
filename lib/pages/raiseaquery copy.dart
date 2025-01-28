@@ -13,7 +13,7 @@ class _DemoScreenState extends State<DemoScreen> {
     return Scaffold(
       body: SingleChildScrollView(
           child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

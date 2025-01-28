@@ -14,39 +14,39 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffd6c7a6),
+        backgroundColor: const Color(0xffd6c7a6),
         body: Stack(
           children: [
-            // Container(
-            //     height: MediaQuery.of(context).size.height,
-            //     width: MediaQuery.of(context).size.width,
-            //     decoration: BoxDecoration(
-            //       image: DecorationImage(
-            //         image: AssetImage("assets/images/backbig.png"),
-            //         fit: BoxFit.cover,
-            //         colorFilter: ColorFilter.mode(
-            //           Color.fromARGB(255, 186, 163, 78).withOpacity(0.8),
-            //           BlendMode.dstATop,
-            //         ),
-            //       ),
-            //     )),
+            Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/backbig.png"),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                      Color.fromARGB(255, 186, 163, 78).withOpacity(0.8),
+                      BlendMode.dstATop,
+                    ),
+                  ),
+                )),
             Container(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     alignment: Alignment.center,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.fitWidth,
                     colorFilter: ColorFilter.mode(
                         Colors.grey.withOpacity(0.1), BlendMode.color),
                     image: const AssetImage(
-                      "assets/images/newHome.jpeg",
+                      "assets/images/office-removebg.png",
                     ),
                   ),
                 )),
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(0.0),
+                padding: const EdgeInsets.all(0.0),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -61,12 +61,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(
                               width: 0,
                             ),
-                            // Image.asset(
-                            //   "assets/images/Logo.png",
-                            //   height: 100,
-                            //   width: 100,
-                            // ),
-                            Spacer(),
+                            Image.asset(
+                              "assets/images/Logo.png",
+                              height: 100,
+                              width: 100,
+                            ),
+                            const Spacer(),
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
@@ -93,64 +93,64 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      // Image.asset(
-                      //   "assets/images/banners.png",
-                      //   height: 200,
-                      // ),
+                      Image.asset(
+                        "assets/images/welcome48th.png",
+                        height: 200,
+                      ),
                       const SizedBox(
                         height: 80,
                       ),
                     ]),
               ),
             ),
-            // Align(
-            //     alignment: Alignment.bottomLeft,
-            //     child: Padding(
-            //         padding: EdgeInsets.only(left: 40, right: 40, bottom: 200),
-            //         child: Image.asset(
-            //           "assets/images/question2-removebg-preview.png",
-            //           width: 100,
-            //           height: 100,
-            //         ))),
-            // Align(
-            //     alignment: Alignment.bottomLeft,
-            //     child: Padding(
-            //         padding: EdgeInsets.only(left: 80, right: 80, bottom: 30),
-            //         child: Image.asset(
-            //           "assets/images/questionimage-removebg-preview.png",
-            //           width: 150,
-            //           height: 200,
-            //         ))),
-            // Align(
-            //     alignment: Alignment.bottomRight,
-            //     child: Padding(
-            //         padding: EdgeInsets.only(left: 40, right: 40, bottom: 20),
-            //         child: Image.asset(
-            //           "assets/images/questionimage-removebg-preview.png",
-            //           width: 200,
-            //           height: 200,
-            //         ))),
-            // Align(
-            //     alignment: Alignment.bottomRight,
-            //     child: Padding(
-            //         padding: EdgeInsets.only(left: 40, right: 20, bottom: 200),
-            //         child: Image.asset(
-            //           "assets/images/question2-removebg-preview.png",
-            //           width: 100,
-            //           height: 100,
-            //         ))),
-            // Align(
-            //     alignment: Alignment.bottomCenter,
-            //     child: Padding(
-            //       padding: EdgeInsets.only(left: 80, right: 80, bottom: 220),
-            //       child: Text(
-            //         "Test Your Knowledge and Win!",
-            //         style: TextStyle(
-            //             fontSize: 30,
-            //             fontWeight: FontWeight.w800,
-            //             color: Colors.grey.shade800),
-            //       ),
-            //     )),
+            Align(
+                alignment: Alignment.bottomLeft,
+                child: Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 200),
+                    child: Image.asset(
+                      "assets/images/question2-removebg-preview.png",
+                      width: 100,
+                      height: 100,
+                    ))),
+            Align(
+                alignment: Alignment.bottomLeft,
+                child: Padding(
+                    padding: EdgeInsets.only(left: 80, right: 80, bottom: 30),
+                    child: Image.asset(
+                      "assets/images/questionimage-removebg-preview.png",
+                      width: 150,
+                      height: 200,
+                    ))),
+            Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 20),
+                    child: Image.asset(
+                      "assets/images/questionimage-removebg-preview.png",
+                      width: 200,
+                      height: 200,
+                    ))),
+            Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                    padding: EdgeInsets.only(left: 40, right: 20, bottom: 200),
+                    child: Image.asset(
+                      "assets/images/question2-removebg-preview.png",
+                      width: 100,
+                      height: 100,
+                    ))),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 80, right: 80, bottom: 220),
+                  child: Text(
+                    "Test Your Knowledge and Win!",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.grey.shade800),
+                  ),
+                )),
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -170,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Icon(
                         Icons.play_arrow,
                         size: 30,
+                        color: Color(0xffEDEDF0),
                       ),
                       SizedBox(
                         width: 10,
@@ -177,7 +178,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         "Start Quiz",
                         style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w800),
+                            color: Color(0xffEDEDF0),
+                            fontSize: 30,
+                            fontWeight: FontWeight.w800),
                       ),
                     ],
                   ),

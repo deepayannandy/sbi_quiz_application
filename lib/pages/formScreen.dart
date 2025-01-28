@@ -51,7 +51,7 @@ class _FormScreenState extends State<FormScreen> {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/backbig.png"),
+                  image: const AssetImage("assets/images/backbig.png"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Colors.white.withOpacity(0.8),
@@ -61,7 +61,7 @@ class _FormScreenState extends State<FormScreen> {
               )),
           SingleChildScrollView(
               child: Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Form(
                     key: userFormKey,
                     child: Column(
@@ -81,7 +81,7 @@ class _FormScreenState extends State<FormScreen> {
                                 height: 100,
                                 width: 100,
                               ),
-                              Spacer(),
+                              const Spacer(),
                               GestureDetector(
                                 onTap: () {
                                   Navigator.pushReplacement(
@@ -124,11 +124,11 @@ class _FormScreenState extends State<FormScreen> {
                                       color: Colors.grey.shade800,
                                       fontWeight: FontWeight.normal),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 NameTextFormField(nameController: name),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Text(
@@ -138,24 +138,24 @@ class _FormScreenState extends State<FormScreen> {
                                       color: Colors.grey.shade800,
                                       fontWeight: FontWeight.normal),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 NumberTextFormField(numberController: number),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
-                                Text(
-                                  "PF Number",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.grey.shade800,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                PFTextFormField(nameController: pfnumber)
+                                // Text(
+                                //   "PF Number",
+                                //   style: TextStyle(
+                                //       fontSize: 20,
+                                //       color: Colors.grey.shade800,
+                                //       fontWeight: FontWeight.normal),
+                                // ),
+                                // const SizedBox(
+                                //   height: 10,
+                                // ),
+                                // PFTextFormField(nameController: pfnumber)
                               ],
                             ),
                           )
@@ -166,8 +166,8 @@ class _FormScreenState extends State<FormScreen> {
               child: WidgetsBinding.instance.window.viewInsets.bottom > 0.0
                   ? Container()
                   : Padding(
-                      padding:
-                          EdgeInsets.only(left: 40, right: 40, bottom: 260),
+                      padding: const EdgeInsets.only(
+                          left: 40, right: 40, bottom: 260),
                       child: Image.asset(
                         "assets/images/questionimage-removebg-preview.png",
                         width: 200,
@@ -178,8 +178,8 @@ class _FormScreenState extends State<FormScreen> {
               child: WidgetsBinding.instance.window.viewInsets.bottom > 0.0
                   ? Container()
                   : Padding(
-                      padding:
-                          EdgeInsets.only(left: 40, right: 20, bottom: 200),
+                      padding: const EdgeInsets.only(
+                          left: 40, right: 20, bottom: 200),
                       child: Image.asset(
                         "assets/images/question2-removebg-preview.png",
                         width: 150,
@@ -196,7 +196,7 @@ class _FormScreenState extends State<FormScreen> {
                     List<Users> user = usersBox!.values
                         .where((element) => element.pfNumber == pfnumber.text)
                         .toList();
-                    if (user.length == 0) {
+                    if (user.isEmpty) {
                       Users userdata = Users(
                           rating: 0,
                           username: name.text,
@@ -219,14 +219,18 @@ class _FormScreenState extends State<FormScreen> {
                     Icon(
                       Icons.play_arrow,
                       size: 30,
+                      color: Colors.white,
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
                       "Save and Play",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ),

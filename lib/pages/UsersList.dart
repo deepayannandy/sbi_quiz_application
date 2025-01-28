@@ -85,7 +85,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +123,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
                           fontSize: 20,
                           fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     GestureDetector(
@@ -139,7 +139,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
                         child: Text("${usersBox!.length}"),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
                         exportToExel();
@@ -158,7 +158,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     GestureDetector(
@@ -228,7 +228,7 @@ class _UsersListScreenState extends State<UsersListScreen> {
           height: 100,
           decoration: BoxDecoration(
               border: Border.all(width: 1, color: Colors.black45),
-              color: Color.fromARGB(255, 236, 246, 249),
+              color: const Color.fromARGB(255, 236, 246, 249),
               borderRadius: BorderRadius.circular(16)),
           child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -240,20 +240,23 @@ class _UsersListScreenState extends State<UsersListScreen> {
                     height: 60,
                     width: 60,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     user.username,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.w400),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     user.contact,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.w400),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     user.pfNumber,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.w400),
                   ),
                 ],
               ))),

@@ -48,7 +48,7 @@ class NumberTextFormField extends StatelessWidget {
           color: Colors.grey.shade800,
         ),
         labelText: "",
-        labelStyle: new TextStyle(color: Colors.grey.shade800),
+        labelStyle: TextStyle(color: Colors.grey.shade800),
       ),
       validator: (value) {
         if (value!.trim().isEmpty) {

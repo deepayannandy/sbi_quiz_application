@@ -19,8 +19,8 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   int score = 0;
   List<int> askedq = [];
-  Random random = new Random();
-  NumberFormat formatter = new NumberFormat("00");
+  Random random = Random();
+  NumberFormat formatter = NumberFormat("00");
   int questionCount = 1;
   String Selectedanswer = "";
   int _start = 90;
@@ -31,7 +31,7 @@ class _QuizScreenState extends State<QuizScreen> {
       _timer!.cancel();
       _timer = null;
     } else {
-      _timer = new Timer.periodic(
+      _timer = Timer.periodic(
         const Duration(seconds: 1),
         (Timer timer) => setState(
           () {
@@ -91,7 +91,7 @@ class _QuizScreenState extends State<QuizScreen> {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/backbig.png"),
+                  image: const AssetImage("assets/images/backbig.png"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Colors.white.withOpacity(0.8),
@@ -101,7 +101,7 @@ class _QuizScreenState extends State<QuizScreen> {
               )),
           SingleChildScrollView(
               child: Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -119,7 +119,7 @@ class _QuizScreenState extends State<QuizScreen> {
                               height: 100,
                               width: 100,
                             ),
-                            Spacer(),
+                            const Spacer(),
                             GestureDetector(
                               onTap: () {
                                 Navigator.pushReplacement(
@@ -152,14 +152,14 @@ class _QuizScreenState extends State<QuizScreen> {
                           width: MediaQuery.of(context).size.width,
                           height: 100,
                           decoration: BoxDecoration(
-                              color: Color(0xffd3eaf2),
+                              color: const Color(0xffd3eaf2),
                               borderRadius: BorderRadius.circular(16)),
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Row(children: [
+                                const Row(children: [
                                   Text(
                                     "Participant Name ",
                                     style: TextStyle(
@@ -177,20 +177,20 @@ class _QuizScreenState extends State<QuizScreen> {
                                     width: 30,
                                   ),
                                 ]),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
                                 Row(children: [
                                   Text(
                                     widget.userdata.username,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.w800),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Text(
                                     "${formatter.format((_start / 60).toInt())} : ${formatter.format(_start % 60)} ",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.w800),
                                   ),
@@ -199,14 +199,14 @@ class _QuizScreenState extends State<QuizScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Container(
                             width: MediaQuery.of(context).size.width,
                             height: 200,
                             decoration: BoxDecoration(
-                                color: Color(0xffd3eaf2),
+                                color: const Color(0xffd3eaf2),
                                 borderRadius: BorderRadius.circular(16)),
                             child: Padding(
                                 padding: const EdgeInsets.all(16.0),
@@ -216,35 +216,35 @@ class _QuizScreenState extends State<QuizScreen> {
                                   children: [
                                     Row(
                                       children: [
-                                        Text(
+                                        const Text(
                                           "Question",
                                           style: TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w400),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text(
-                                          "${questionCount}/15",
-                                          style: TextStyle(
+                                          "$questionCount/15",
+                                          style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w400),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 8,
                                     ),
                                     Text(
                                       askedquestion!.question!,
                                       textAlign: TextAlign.left,
                                       maxLines: 4,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.w800),
                                     ),
                                   ],
                                 ))),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
@@ -254,7 +254,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             answersCard(askedquestion!.b!)
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
@@ -269,14 +269,14 @@ class _QuizScreenState extends State<QuizScreen> {
             alignment: Alignment.bottomRight,
             child: Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
-              child: Container(
+              child: SizedBox(
                 width: 200,
                 child: ElevatedButton(
                   style: FilledButtonStyle(),
                   onPressed: () {
                     if (questionCount < 15) {
                       questionCount = questionCount + 1;
-                      print("${askedquestion!.answer} - ${Selectedanswer}");
+                      print("${askedquestion!.answer} - $Selectedanswer");
                       if (askedquestion!.answer == Selectedanswer) {
                         score = score + 1;
                       }
@@ -298,16 +298,20 @@ class _QuizScreenState extends State<QuizScreen> {
                     children: [
                       Text(
                         questionCount > 9 ? "Submit" : "Next",
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w800),
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                        ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       questionCount < 10
-                          ? Icon(
+                          ? const Icon(
                               Icons.skip_next_rounded,
                               size: 30,
+                              color: Colors.white,
                             )
                           : Container(
                               height: 56,
@@ -326,7 +330,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     height: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.height,
                     color: Colors.black.withOpacity(.5),
-                    child: Text(
+                    child: const Text(
                       "Times Up",
                       style: TextStyle(
                           fontSize: 50,
@@ -340,7 +344,7 @@ class _QuizScreenState extends State<QuizScreen> {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
-              child: Container(
+              child: SizedBox(
                 width: 200,
                 child: ElevatedButton(
                   style: HollowButtonStyle(),
@@ -401,7 +405,8 @@ class _QuizScreenState extends State<QuizScreen> {
                 answer,
                 textAlign: TextAlign.left,
                 maxLines: 2,
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
+                style:
+                    const TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
               ))),
     );
   }
